@@ -4,6 +4,11 @@ Taller gradual para establecer una base común de Python, sin presuponer experie
 en programación. El material puede continuar en la siguiente sesión según el ritmo
 del grupo; la prioridad es resolver y explicar los ejercicios.
 
+## Entrega de prácticas
+
+La fecha límite para entregar las prácticas de la Unidad 1 es el **7 de octubre de 2026**.
+Envía los entregables mediante el [formulario de entrega](https://docs.google.com/forms/d/e/1FAIpQLSdTJ2vU04VfIpw1Tst_T_0g0tlbE-n6ZI81nrG0RQJMReAtaQ/viewform?usp=publish-editor).
+
 ## Presentación de apertura
 
 Antes de la notebook 1, revisaremos la asignatura, las tres unidades del curso,
@@ -37,6 +42,11 @@ del código están en inglés.
 - Excepciones y comprobaciones con `assert`.
 - POO: clases, instancias, atributos, métodos y estado independiente.
 - Caso integrador: conservar predicciones y resumir un lote.
+
+## Práctica y entrega
+
+La sesión reúne **12 ejercicios** entre ambas notebooks. Consulta los
+[entregables en PRACTICA.md](./PRACTICA.md).
 
 ## Dinámica del taller
 
