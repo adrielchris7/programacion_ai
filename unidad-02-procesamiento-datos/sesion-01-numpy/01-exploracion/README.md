@@ -10,11 +10,11 @@ Desde esta carpeta:
 ```bash
 uv sync --locked
 uv run --locked python main.py
-uv run --locked jupyter lab
 ```
 
-Abre [u2_n1_arreglos_numpy.ipynb](./u2_n1_arreglos_numpy.ipynb). En VS Code,
-selecciona el kernel de `.venv` después de sincronizar el proyecto.
+Abre [u2_n1_arreglos_numpy.ipynb](./u2_n1_arreglos_numpy.ipynb) en VS Code o
+PyCharm y selecciona el entorno `.venv` después de sincronizar el proyecto.
+Consulta las [opciones de editor](../../README.md#notebooks-locales).
 
 Conserva la carpeta `../datos/` incluida en la sesión. El script resuelve su ruta
 a partir de `main.py`; la notebook parte de la carpeta de este proyecto.

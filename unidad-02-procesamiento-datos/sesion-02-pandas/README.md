@@ -1,5 +1,7 @@
 # Sesión 2: Tablas con pandas y paso a NumPy
 
+[Presentación de la sesión (PDF)](https://drive.google.com/file/d/1fgePaMIGZf_aMCW_2T3xgsepiQbHjG82/view?usp=drivesdk).
+
 En la sesión anterior, cada columna del arreglo representaba una sala y todas
 contenían temperaturas. Titanic reúne números, texto y valores ausentes en una
 misma tabla. Usaremos pandas para conservar los nombres de las columnas mientras
@@ -13,7 +15,7 @@ Envía los entregables mediante el [formulario de entrega](https://docs.google.c
 
 ## Recorrido
 
-1. Abre [u2_n3_pandas_titanic.ipynb](./u2_n3_pandas_titanic.ipynb) desde esta carpeta.
+1. Abre [u2_n3_pandas_titanic.ipynb](./u2_n3_pandas_titanic.ipynb) en VS Code o PyCharm con el entorno de este proyecto.
 2. Examina columnas, tipos, ausentes y filas repetidas.
 3. Filtra, agrupa y crea una variable nueva sin perder las etiquetas.
 4. Comprueba un `merge` sencillo y transforma las columnas numéricas a NumPy.
@@ -29,8 +31,10 @@ Desde esta carpeta:
 
 ```bash
 uv sync --locked
-uv run --locked jupyter lab
 ```
+
+Consulta las [opciones de editor](../README.md#notebooks-locales) para
+seleccionar el entorno `.venv`.
 
 La notebook utiliza [Titanic-Dataset.csv](../../datasets/Titanic-Dataset.csv),
 incluido en el repositorio. No requiere cuenta de Kaggle ni descarga durante la

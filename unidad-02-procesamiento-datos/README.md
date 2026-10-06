@@ -16,11 +16,42 @@ Envía los entregables mediante el [formulario de entrega](https://docs.google.c
 |---|---|---|
 | 1 | [NumPy y vectorización](./sesion-01-numpy/README.md) | Formas, tipos, selección, vistas, operaciones vectorizadas y broadcasting con mediciones. |
 | 2 | [pandas y paso a NumPy](./sesion-02-pandas/README.md) | Cargar, limpiar, agrupar y unir datos de Titanic; extraer una matriz numérica. |
-| 3 | [PyTorch y datasets](./sesion-03-pytorch/README.md) | Tensores, `Dataset`, `DataLoader` y exploración de CIFAR-10 por lotes. |
+| 3 | [PyTorch y datasets](./sesion-03-pytorch/README.md) | Tensores, `Dataset`, `DataLoader`, CIFAR-10 por lotes y embeddings de texto. |
 | 4 | [Visualización](./sesion-04-visualizacion/README.md) | Histogramas, porcentajes por grupo y cuadrículas de imágenes con Matplotlib. |
 
 Las notebooks se numeran de forma continua dentro de la unidad: `u2_n1`,
 `u2_n2`, `u2_n3`, etc.
+
+## Notebooks locales
+
+Abre la carpeta del proyecto indicado en el README de la sesión y ejecuta
+`uv sync --locked` en su terminal. La sesión 1 tiene dos proyectos, cada uno con
+su propia `.venv`. Abre la notebook desde el enlace del README y usa el entorno
+de ese proyecto como kernel. Cada proyecto incluye `ipykernel` y `pip` para la
+integración con el editor; reiniciar el kernel borra las variables que habían
+quedado en memoria.
+
+### VS Code (recomendado)
+
+Instala las extensiones **Python** y **Jupyter**. En la esquina superior derecha
+de la notebook, elige **Select Kernel → Python Environments → `.venv`**. Si no
+aparece, usa **Select Another Kernel** y selecciona `.venv/bin/python` en
+macOS/Linux o `.venv/Scripts/python.exe` en Windows.
+
+[Notebooks en VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) ·
+[uv con VS Code](https://docs.astral.sh/uv/guides/integration/jupyter/#using-jupyter-from-vs-code)
+
+### PyCharm
+
+Abre la carpeta del proyecto en PyCharm. En **Python Interpreter**, selecciona
+**Add Interpreter → Add Local Interpreter → uv** y elige la `.venv` existente.
+Abre la notebook desde el enlace del README y ejecuta una celda; PyCharm puede
+iniciar la ejecución local con ese intérprete. Si cambia de proyecto, selecciona
+la `.venv` correspondiente. Si la notebook no se abre correctamente, comprueba
+que el complemento **Markdown** esté habilitado en PyCharm.
+
+[Notebooks en PyCharm](https://www.jetbrains.com/help/pycharm/jupyter-notebook-support.html) ·
+[Entornos uv en PyCharm](https://www.jetbrains.com/help/pycharm/uv.html)
 
 ## Ejercicios
 

@@ -1,5 +1,7 @@
 # Sesión 4: Visualización de datos
 
+[Presentación de la sesión (PDF)](https://drive.google.com/file/d/19PdTA8ILRMk53OZG0Cddl8fo4GeTniYx/view?usp=drivesdk).
+
 Una sesión breve para representar los resultados de Titanic y las imágenes de
 CIFAR-10 con Matplotlib. Trabajaremos con un histograma, una comparación de
 porcentajes y una cuadrícula de imágenes.
@@ -26,10 +28,12 @@ Desde esta carpeta:
 
 ```bash
 uv sync --locked
-uv run --locked jupyter lab
 ```
 
-Abre la notebook con el kernel de este proyecto. Aquí usamos los archivos NumPy
+Abre [u2_n5_visualizacion.ipynb](./u2_n5_visualizacion.ipynb) en VS Code o
+PyCharm con el entorno `.venv` de este proyecto; consulta las
+[opciones de editor](../README.md#notebooks-locales).
+Aquí usamos los archivos NumPy
 ya exportados, por lo que no hace falta instalar PyTorch otra vez.
 
 ## Exportar los ejemplos

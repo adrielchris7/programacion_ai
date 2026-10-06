@@ -1,8 +1,11 @@
 # Sesión 3: Tensores y datasets con PyTorch
 
+[Presentación de la sesión (PDF)](https://drive.google.com/file/d/19Jbf46jSTM2edUpSugP48twTpEXfJVj4/view?usp=drivesdk).
+
 Convertiremos las matrices de Titanic a tensores y después exploraremos imágenes
 de CIFAR-10. Trabajaremos con muestras, etiquetas, transformaciones y lotes para
-entender los datos que recibe una aplicación de aprendizaje automático.
+entender los datos que recibe una aplicación de aprendizaje automático. Al final,
+convertiremos textos en embeddings y haremos una búsqueda por similitud.
 
 ## Entrega de prácticas
 
@@ -15,9 +18,10 @@ Envía los entregables mediante el [formulario de entrega](https://docs.google.c
 |---|---|---|
 | 1 | Arreglos NumPy, tensores y memoria compartida | Notebook, sección 1 |
 | 2 | Muestras, `TensorDataset` y `DataLoader` | Notebook, sección 2 |
-| 3 | CIFAR-10 y transformaciones de imágenes | Notebook, sección 3 |
+| 3 | CIFAR-10, transformaciones y lectura de imágenes bajo demanda | Notebook, sección 3 |
 | 4 | Ejes de un lote y normalización | Notebook, sección 4 |
 | 5 | Exportar una selección para visualizarla | Notebook, sección 5 y `main.py` |
+| 6 | Embeddings con SentenceTransformer y búsqueda con PyTorch | Notebook, sección 6 |
 
 Los **ejercicios 1–4** están en
 [u2_n4_tensores_datasets.ipynb](./u2_n4_tensores_datasets.ipynb).
@@ -41,7 +45,6 @@ Después prepara este proyecto y descarga CIFAR-10:
 ```bash
 uv sync --locked
 uv run --locked python main.py --download
-uv run --locked jupyter lab
 ```
 
 La primera descarga obtiene el archivo completo de CIFAR-10 (unos 170 MB
@@ -50,8 +53,24 @@ archivo de descarga incluye ambos conjuntos. Prepara la descarga antes de clase.
 En ejecuciones posteriores puedes omitir `--download`; la notebook utiliza
 los archivos locales y no intenta descargarlos.
 
-Abre la notebook con el kernel de este proyecto. En VS Code, selecciona el
-intérprete de su carpeta `.venv`.
+La sección 6 utiliza `sentence-transformers`, incluida en las dependencias del
+proyecto. La primera carga de `all-MiniLM-L6-v2` descarga los pesos del modelo;
+requiere internet y después utiliza su caché local. Puedes preparar esa descarga
+antes de clase:
+
+```bash
+uv run --locked python -c "from sentence_transformers import SentenceTransformer; SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2', device='cpu')"
+```
+
+Es un ejemplo guiado: se mantienen los cinco ejercicios de la práctica.
+
+Como demostración complementaria, abre [Embeddings en CPU y CUDA en Colab](https://colab.research.google.com/drive/18C8kn_iWqNVayn9ZvcrX203rL4pKpPky).
+Repite la búsqueda en GPU y compara tiempos con el mismo modelo y lote.
+Es independiente de los archivos locales y no añade entregables.
+
+Abre [u2_n4_tensores_datasets.ipynb](./u2_n4_tensores_datasets.ipynb) en VS Code
+o PyCharm con el entorno `.venv` de este proyecto; consulta las
+[opciones de editor](../README.md#notebooks-locales).
 
 ## Proyecto
 
