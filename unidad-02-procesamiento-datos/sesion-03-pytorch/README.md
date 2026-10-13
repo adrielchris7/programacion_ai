@@ -9,7 +9,7 @@ convertiremos textos en embeddings y haremos una búsqueda por similitud.
 
 ## Entrega de prácticas
 
-La fecha límite para entregar las prácticas de la Unidad 2 es el **13 de octubre de 2026**.
+La fecha límite para entregar las prácticas de la Unidad 2 es el **19 de octubre de 2026**.
 Envía los entregables mediante el [formulario de entrega](https://docs.google.com/forms/d/e/1FAIpQLScOPQOB1sgjXsZbrealNcJ_U8Aa-bqtds5SozcSsRNSek7FxA/viewform?usp=publish-editor).
 
 ## Contenido
@@ -94,7 +94,6 @@ reutilizar las funciones.
 ```bash
 uv run --locked python main.py
 uv run --locked python main.py --limit 10 --batch-size 4 --output-dir outputs/ten
-uv run --locked python -m pytest
 uv run --locked ruff check .
 uv run --locked ruff format --check .
 ```
@@ -124,3 +123,6 @@ por Git. Los gráficos comparativos y las cuadrículas de imágenes se desarroll
 en la sesión 4.
 
 [Fuentes oficiales](./FUENTES.md) · [Volver a la unidad](../README.md)
+
+Las pruebas existentes se pueden ejecutar con `uv run --locked python -m pytest`
+como apoyo opcional; no se pide crear pruebas para la práctica.

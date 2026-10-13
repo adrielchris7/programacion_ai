@@ -24,10 +24,14 @@ servidor MCP por HTTP local para buscar y analizar una selección de Electronics
 con embeddings y operaciones de PyTorch o NumPy. Incluye los datos, una notebook
 de exploración y guías de desarrollo y conexión.
 
-**Fecha límite: 19 de octubre de 2026.** Consulta sus entregables y evaluación en
+**Fecha límite: 26 de octubre de 2026.** Consulta sus entregables y evaluación en
 el README del proyecto. La unidad 3 puede incorporarse como ampliación opcional.
 
 ## Ejercicios
+
+Listas de cotejo por unidad: [Unidad 1](./unidad-01-python-moderno/LISTA_COTEJO.md),
+[Unidad 2](./unidad-02-procesamiento-datos/LISTA_COTEJO.md) y
+[Unidad 3](./unidad-03-integracion-calidad/LISTA_COTEJO.md).
 
 Cada sesión tiene un `PRACTICA.md` con la cantidad de ejercicios, dónde
 resolverlos y los entregables. Los enunciados están en las notebooks o en
@@ -39,7 +43,7 @@ en Google Colab también se encuentran en el README de la sesión correspondient
 | 1 | 1. Curso acelerado y Zen de Python | 12 | [PRACTICA.md](./unidad-01-python-moderno/sesion-01-curso-acelerado-python/PRACTICA.md) |
 | 1 | 2. Tipado y Pydantic | 8 | [PRACTICA.md](./unidad-01-python-moderno/sesion-02-tipado-pydantic/PRACTICA.md) |
 | 1 | 3. Iteración, recursos y concurrencia | 4 | [PRACTICA.md](./unidad-01-python-moderno/sesion-03-iteracion-recursos-concurrencia/PRACTICA.md) |
-| 1 | 4. Organización, reproducibilidad y MCP local | 9 | [PRACTICA.md](./unidad-01-python-moderno/sesion-04-reproducibilidad/PRACTICA.md) |
+| 1 | 4. Organización, reproducibilidad y MCP local | 7 | [PRACTICA.md](./unidad-01-python-moderno/sesion-04-reproducibilidad/PRACTICA.md) |
 | 2 | 1. NumPy y vectorización | 11 | [PRACTICA.md](./unidad-02-procesamiento-datos/sesion-01-numpy/PRACTICA.md) |
 | 2 | 2. Tablas con pandas | 5 | [PRACTICA.md](./unidad-02-procesamiento-datos/sesion-02-pandas/PRACTICA.md) |
 | 2 | 3. Tensores y datasets con PyTorch | 5 | [PRACTICA.md](./unidad-02-procesamiento-datos/sesion-03-pytorch/PRACTICA.md) |

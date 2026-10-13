@@ -1,6 +1,6 @@
 # Proyecto final: búsqueda y análisis de productos de Amazon con MCP
 
-**Fecha límite: 19 de octubre de 2026.**
+**Fecha límite: 26 de octubre de 2026.**
 
 Construye un servidor MCP por HTTP local para buscar y analizar productos de
 **Amazon Reviews 2023 · Electronics**, utilizando embeddings y operaciones de
@@ -19,8 +19,15 @@ entre 5 y 30 por producto; no necesitas preparar otra muestra ni crear un agente
 ## Qué implementar
 
 Crea tu proyecto con **`uv`** y trabaja con los dos archivos de la selección proporcionada
-en `datasets/`. Adapta la lectura de la notebook, carga la configuración e implementa
-la codificación de textos con `sentence-transformers/all-MiniLM-L6-v2`.
+en `datasets/`. Implementa `support/data.py` para leer y preparar los datos,
+`support/settings.py` para cargar y validar la configuración y `support/encoder.py`
+para codificar textos con `sentence-transformers/all-MiniLM-L6-v2`. La notebook
+sirve como referencia; la aplicación debe ejecutarse sin correrla previamente.
+Consulta la [estructura del proyecto](./GUIA.md#estructura-del-proyecto).
+
+Modularizar significa separar las funciones en archivos Python e importarlas,
+como en las notebooks y el proyecto `uv` de U1S4. El archivo `support/__init__.py`
+puede quedar vacío.
 
 Combina el embedding del catálogo con el promedio normalizado de los embeddings
 de sus reseñas: **50 % de cada fuente**, seguido de normalización. Usa el mismo
@@ -37,8 +44,8 @@ Implementa estas tres herramientas:
 | `compare_products(product_ids)` | Comparar al menos dos productos distintos. | Resumen de cada producto y diferencias de media respecto al primero. |
 
 Calcula las similitudes y estadísticas con NumPy o PyTorch y devuelve valores de
-Python serializables. Puedes usar pandas para explorar los datos. Organiza el
-código en módulos o directamente en `server.py`.
+Python serializables. Puedes usar pandas para explorar los datos. Las herramientas
+de `server.py` deben utilizar los módulos de `support/`.
 
 Las estadísticas describen **las reseñas seleccionadas**, no todas las valoraciones
 de Amazon. No se evalúan la regeneración ni las gráficas de la notebook.
@@ -58,13 +65,14 @@ La búsqueda semántica devuelve los productos más cercanos incluso si la consu
 es poco relevante. Su puntuación no es una probabilidad ni mide la calidad del producto.
 
 Usa **anotaciones de tipo** y comprueba **`mypy --strict`** sobre los archivos Python
-de tu aplicación. **Ruff es opcional.**
+de tu aplicación, incluidos todos los módulos de `support/`; el análisis debe
+finalizar sin errores. **Ruff es opcional.**
 
 ## Entregables
 
 Sube el proyecto en un **archivo comprimido (.zip)** mediante el
 [formulario de entrega](https://docs.google.com/forms/d/e/1FAIpQLSew4UpE94kmWvK5M54-ubF1aeTqbk5SMOQ1IfDjdBiingDWFw/viewform?usp=publish-editor),
-a más tardar el **19 de octubre de 2026**.
+a más tardar el **26 de octubre de 2026**.
 
 - Carpeta del proyecto con código, `config.json`, `pyproject.toml`, `uv.lock`,
   `.python-version` y `datasets/`. Omite `.venv`, cachés y pesos del modelo.
@@ -77,7 +85,7 @@ a más tardar el **19 de octubre de 2026**.
 
 | Criterio | Puntos |
 |---|---:|
-| Ejecución reproducible con `uv` y configuración del modelo | 15 |
+| Ejecución reproducible con `uv`, modularización y configuración del modelo | 15 |
 | Tres herramientas MCP y demostración HTTP | 25 |
 | Embeddings, búsqueda vectorizada y estadísticas correctas | 40 |
 | Interpretación de resultados y alcance de los datos | 10 |

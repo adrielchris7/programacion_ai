@@ -10,7 +10,7 @@ módulos, dependencias, logging y reproducción del entorno.
 
 ## Entrega de prácticas
 
-La fecha límite para entregar las prácticas de la Unidad 1 es el **7 de octubre de 2026**.
+La fecha límite para entregar las prácticas de la Unidad 1 es el **12 de octubre de 2026**.
 Envía los entregables mediante el [formulario de entrega](https://docs.google.com/forms/d/e/1FAIpQLSdTJ2vU04VfIpw1Tst_T_0g0tlbE-n6ZI81nrG0RQJMReAtaQ/viewform?usp=publish-editor).
 
 ## Recorrido
@@ -23,8 +23,8 @@ Envía los entregables mediante el [formulario de entrega](https://docs.google.c
 
 La [guía](./GUIA.md) construye el ejemplo por etapas. El
 [proyecto de referencia](./project/README.md) contiene la implementación completa.
-La sesión reúne **9 ejercicios**: cinco de la aplicación y cuatro de calidad
-con pytest, Ruff, mypy y Makefile. [PRACTICA.md](./PRACTICA.md) reúne los
+La sesión reúne **7 ejercicios**: cinco de la aplicación y dos de calidad
+con Ruff, mypy y Makefile. [PRACTICA.md](./PRACTICA.md) reúne los
 entregables y enlaza el bloque de [CALIDAD.md](./CALIDAD.md).
 
 ## Ejecutar la referencia
