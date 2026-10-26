@@ -51,6 +51,22 @@ usar esos comandos desde PowerShell sin instalar Make.
 
 Introduce un import sin usar, observa la falla de Ruff y corrígelo.
 
+### Answer: 
+
+Se añadió de manera intencional un import no utilizado (`import sys`) en `main.py` para probar la detección del linter. Al ejecutar la comprobación con Ruff:
+
+```bash
+uv run --locked ruff check 
+
+1 | """Query the catalog directly from the terminal."""
+  - import sys
+2 | import argparse
+  |
+
+Found 2 errors.
+[*] 2 fixable with the `--fix` option.
+```
+
 ### Ejercicio 7 · Comprobar desde una copia limpia
 
 Ejecuta las comprobaciones de Ruff, mypy y las pruebas existentes con pytest
@@ -59,3 +75,25 @@ desde una copia limpia.
 Entrega la configuración y los resultados junto al proyecto. Puedes usar salida
 de terminal o capturas, según [PRACTICA.md](./PRACTICA.md#entregables).
 Consulta las [fuentes oficiales](./FUENTES.md) para profundizar.
+
+
+### Answer:
+
+
+Se ejecutaron los comandos de verificación de calidad sobre la copia limpia del proyecto en `course-catalog`:
+
+```bash
+uv run --locked ruff check .
+uv run --locked ruff format --check .
+uv run --locked mypy --strict main.py server.py client.py catalog
+uv run --locked python -m pytest
+```
+
+Resultados obtenidos:
+- Ruff check: Pasó exitosamente (All checks passed!).
+
+- Ruff format check: Todos los archivos cumplen con el estándar de formato (7 files already formatted).
+
+- Mypy strict: Chequeo estático finalizado sin observaciones (Success: no issues found in 6 source files).
+
+- Pytest: Ejecutado correctamente (no tests ran / collected 0 items), confirmando que la estructura del subproyecto no cuenta con una suite de pruebas local.

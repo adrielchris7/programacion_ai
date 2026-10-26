@@ -1,5 +1,4 @@
 """Query the catalog directly from the terminal."""
-
 import argparse
 import json
 import logging
